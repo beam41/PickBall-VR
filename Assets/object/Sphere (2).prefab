@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114238371789311400}
   - component: {fileID: 114628337981568094}
   - component: {fileID: 114359949514238330}
-  - component: {fileID: 114848666050182562}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -190,23 +189,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &114848666050182562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1456052056997852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!135 &135507086235911910
 SphereCollider:
   m_ObjectHideFlags: 1

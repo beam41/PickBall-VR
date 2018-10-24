@@ -5,11 +5,15 @@ using UnityEngine;
 public class interactBall : MonoBehaviour {
     // Use this for initialization
     GameObject player;
-    Outline outliner;
+    public Renderer rend;
+
     float distance_;
 	void Start () {
         player = GameObject.Find("Player");
-        outliner = gameObject.GetComponent<Outline>();
+        rend = GetComponent<Renderer>();
+        rend.material.shader = Shader.Find("Custom/OutlineColor");
+        rend.material.SetFloat("_Outline", 0f);
+        
 	}
 	
 	// Update is called once per frame
@@ -20,26 +24,32 @@ public class interactBall : MonoBehaviour {
     public void GetIt(){
         if(distance_ <= 5)
         {
-            Debug.Log(distance_);
-            outliner.OutlineWidth = 10f;
+            //Debug.Log(distance_);
+            //Debug.Log(rend.material.GetFloat("_Outline"));
+            rend.material.SetFloat("_Outline", 0.05f);
         }
-        
-        
+
+
     }
     public void takeIt()
     {
+        
         if(distance_ <= 5)
         {
             Destroy(this.gameObject);
-            Debug.Log("you get this object");
+            //Debug.Log("you get this object");
+            
+            
+            
         }
     
     }
     public void offIt()
     {   
-   
-        Debug.Log("off it");
-        outliner.OutlineWidth = 0f;
-    
+        
+        //Debug.Log("off it");
+        rend.material.SetFloat("_Outline", 0f);
+
+
     }
 }
