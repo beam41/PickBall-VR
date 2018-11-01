@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class interactBall : MonoBehaviour {
     // Use this for initialization
@@ -18,7 +16,7 @@ public class interactBall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        distance_ = Vector3.Distance(this.transform.position, player.transform.position);
+        distance_ = Vector3.Distance(transform.position, player.transform.position);
 	}
 
     public void GetIt(){
@@ -36,7 +34,7 @@ public class interactBall : MonoBehaviour {
         
         if(distance_ <= 5)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             //Debug.Log("you get this object");
             
             

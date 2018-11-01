@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Destroyit : MonoBehaviour {
-    GameObject spawnObject;
+
     // Use this for initialization
     void Start () {
         
@@ -20,7 +18,7 @@ public class Destroyit : MonoBehaviour {
 	}
     void delleteIt()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
        
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AnimatorController : MonoBehaviour {
     // Use this for initialization
@@ -8,10 +6,7 @@ public class AnimatorController : MonoBehaviour {
 	void Start () {
         animator = GetComponent<Animator>();
 	}
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
     public void isRuning()
     {
         animator.SetBool("Run", true);
